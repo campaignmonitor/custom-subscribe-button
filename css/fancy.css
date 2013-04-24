@@ -1,0 +1,230 @@
+.modal.hide {
+  display: none;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #373c44;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.3;
+  filter: alpha(opacity=40);
+}
+a#button {
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  background: #10af90;
+  border: none;
+  border-bottom: 2px solid #0c806a;
+  color: #fff;
+  font-size: 17px;
+  padding: 15px 20px 13px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+a#button:hover {
+  background: #0cc29f;
+}
+a#button:active,
+a#button:focus {
+  background: #0fa688;
+  border-bottom: 0;
+  border-top: 2px solid #0c806a;
+  outline: none;
+  box-shadow: 0 2px 1px #fff;
+  -moz-box-shadow: 0 2px 1px #fff;
+  -webkit-box-shadow: 0 2px 1px #fff;
+}
+.modal {
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  width: 398px;
+  margin: -17% 0 0 -250px;
+  background-color: #FFF;
+  z-index: 1000;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 4px rgba(55, 60, 65, 0.1);
+  -moz-box-shadow: 0 0 0 4px rgba(55, 60, 65, 0.1);
+  -webkit-box-shadow: 0 0 0 4px rgba(55, 60, 65, 0.1);
+  padding: 50px 50px 55px;
+}
+.modal a.close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  padding: 5px 10px;
+  color: #9099A3;
+  text-decoration: none;
+}
+.modal a.close:hover {
+  color: #5d6670;
+}
+.modal h1,
+.modal h2 {
+  margin: 0;
+  padding: 0;
+}
+.modal h1 {
+  font-family: 'Droid Serif', serif;
+  font-weight: 700;
+  color: #373c44;
+  margin-left: -2px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+.modal h2 {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9099A3;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-weight: normal;
+  width: 100%;
+  border-bottom: 1px solid #ECEEF1;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.modal #response {
+  float: left;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 15px;
+  margin: 23px 0 0 20px;
+  padding: 0 0 0 25px;
+  color: #9099A3;
+  background: url('../gfx/tick.png') left center no-repeat;
+  display: none;
+}
+.modal form#subForm button,
+.modal form#subForm input {
+  font-family: Arial, sans-serif;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0;
+}
+.modal form#subForm input {
+  width: 378px;
+  border: 1px solid #cfd4db;
+  padding: 12px 10px;
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #373c44;
+}
+.modal form#subForm input::-webkit-input-placeholder {
+  color: #c8ccd1;
+}
+.modal form#subForm input:-moz-placeholder {
+  color: #c8ccd1;
+}
+.modal form#subForm input::-moz-placeholder {
+  color: #c8ccd1;
+}
+.modal form#subForm input:-ms-input-placeholder {
+  color: #c8ccd1;
+}
+.modal form#subForm input:focus {
+  border-color: #b1b9c6;
+  outline: none;
+}
+.modal form#subForm input:focus::-webkit-input-placeholder {
+  color: #acb3ba;
+}
+.modal form#subForm input:focus:-moz-placeholder {
+  color: #acb3ba;
+}
+.modal form#subForm input:focus::-moz-placeholder {
+  color: #acb3ba;
+}
+.modal form#subForm input:focus:-ms-input-placeholder {
+  color: #acb3ba;
+}
+.modal form#subForm input.error {
+  background: url('../gfx/cross.png') right center no-repeat;
+  background-position: 372px center;
+  color: #df452c;
+}
+.modal form#subForm button {
+  float: left;
+  background: #df452c;
+  border: none;
+  border-bottom: 2px solid #a8321d;
+  color: #fff;
+  font-size: 15px;
+  padding: 13px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.modal form#subForm button:hover {
+  background: #e74d34;
+}
+.modal form#subForm button:active,
+.modal form#subForm button:focus {
+  background: #d23920;
+  border-bottom: 0;
+  border-top: 2px solid #922c19;
+  outline: none;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    padding-top: 100px;
+  }
+  .modal {
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 8%;
+  }
+  .modal form#subForm a.close {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .modal form#subForm h1 {
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+  .modal form#subForm input {
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .modal form#subForm input.error {
+    background-position: 95% center;
+  }
+  .modal form#subForm button {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal form#subForm #response {
+    font-size: 16px;
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0 0 22px 0;
+    text-align: center;
+    background-position: bottom center;
+  }
+}

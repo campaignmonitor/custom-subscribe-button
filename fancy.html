@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>A Custom Campaign Monitor Subscribe Button</title>
+	<link href="css/fancy.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<meta name="author" content="Buzz Usborne - www.buzzusborne.com">
+</head>
+<body>
+		
+	<!-- Button -->
+	<a data-toggle="modal" data-target="#modal" href="javascript://" id="button">Subscribe to our newsletter</a>
+	
+	<!-- Modal -->
+	<div id="modal" class="modal hide">
+		<form action="http://delivery.prevue.it/t/r/s/jdditkj/" method="post" id="subForm">
+			<a class="close" href="javascript://" data-dismiss="modal">&#215;</a>
+			<h1>Get our newsletter</h1>
+			<h2>Want the latest and greatest from our blog straight to your inbox? Chuck us your details and get a sweet weekly email.</h2>
+			<input type="text" name="cm-name" placeholder="Your name" />
+			<input type="email" spellcheck="false" name="cm-jdditkj-jdditkj" id="email" placeholder="Your email address" />
+			<button type="submit" value="Subscribe">Subscribe</button>
+			<div id="response">Thanks! You're subscribed</div>
+		</form>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+	<!-- Twitter Bootstrap Modal: http://twitter.github.io/bootstrap/javascript.html#modals -->
+	<script src="js/modal.js"></script>
+	
+	<!-- Campaign Monitor AJAX Subscribe: https://gist.github.com/jdennes/1155479 -->
+	<script type="text/javascript">
+		$(function () {
+			$('#subForm').submit(function (e) {
+				e.preventDefault();
+				$('#email').removeClass();
+				$('button').fadeTo(200,0.5);
+				$.getJSON(
+				this.action + "?callback=?",
+				$(this).serialize(),
+				function (data) {
+					$('button').stop().fadeTo(200,1);
+					if (data.Status === 400) { $('#email').addClass('error'); } else { $('#response').show(); }
+				});
+			});
+		});
+	</script>
+</body>
+</html>
