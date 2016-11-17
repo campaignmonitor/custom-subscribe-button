@@ -1,9 +1,9 @@
 Custom Subscribe Button
 =======================
 
-This is a quick demo of how to use basic HTML, CSS and Javascript to create your own custom [Subscribe Button](http://www.campaignmonitor.com/blog/post/3936/say-hello-to-the-subscribe-button) that'll enable visitors to join your Campaign Monitor list.
+This is a quick demo of how to use basic HTML, CSS and Javascript to create your own custom [Subscribe Button](https://www.campaignmonitor.com/blog/new-features/2013/02/say-hello-to-the-subscribe-button/) that'll enable visitors to join your Campaign Monitor list.
 
-[View a demo](http://www.buzzusborne.com/button)
+[View a demo](https://www.campaignmonitor.com/button/)
 
 
 
